@@ -1,0 +1,16 @@
+{
+  "name": "capstone__solid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/tailwind/index.css -o ./src/css/index.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.6",
+    "tailwindcss": "^4.1.6",
+    "tw-elements": "^2.0.0"
+  }
+}
