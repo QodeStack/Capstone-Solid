@@ -1,3 +1,9 @@
 @import "tailwindcss";
 @config '../../tailwind.config.js';
 
+.logo .container-fluid .content img{
+    transition :filter 0.5 ease;
+}
+.logo .container-fluid .content img:hover{
+    filter: brightness(60%)
+}
