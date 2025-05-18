@@ -7,3 +7,38 @@
 .logo .container-fluid .content img:hover{
     filter: brightness(60%)
 }
+.Features .container-fluid .item{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+}
+.Features .container-fluid .item:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.solution .edit{
+    position: relative;
+}
+.solution .edit .overlay{
+    position:absolute;
+    content: "";
+    background-color: rgb(127, 207, 239);
+    width: 297px;
+    height:15px;
+    bottom:-53px;
+    z-index:10;
+    
+}
+.solution .edit h3
+{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:20;
+}
+.Packed .know i{
+    transform: translateX(0px);
+    transition: transform 0.5s ease;
+}
+.Packed .know:hover i{
+    transform: translateX(10px);
+    transition: transform 0.5s ease;
+}
+
