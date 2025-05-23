@@ -1,6 +1,19 @@
 @import "tailwindcss";
 @config '../../tailwind.config.js';
 
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+/* Lớp thêm khi scroll xuống */
+.navbar-scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* tạo đường kẻ bằng shadow */
+}
 .logo .container-fluid .content img{
     transition :filter 0.5 ease;
 }
@@ -33,12 +46,41 @@
     left:0;
     z-index:20;
 }
-.Packed .know i{
+.Packed .know i,.questions .know i{
     transform: translateX(0px);
     transition: transform 0.5s ease;
 }
-.Packed .know:hover i{
+.Packed .know:hover i,.questions .know:hover i{
     transform: translateX(10px);
     transition: transform 0.5s ease;
+}
+.questions{
+    background-image:url(/src/img/shape-dotted-light-02.svg);
+}
+#accordionFlushExample{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.questions .edit{
+    position: relative;
+}
+.questions .edit .overlay{
+    position:absolute;
+    content: "";
+    background-color: rgb(252, 153, 88);
+    width: 235px;
+    height:15px;
+    bottom:-40px;
+    z-index:10;
+    
+}
+.questions .edit h3
+{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:20;
+}
+.testimonials .carousel2 .item{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
 }
 
