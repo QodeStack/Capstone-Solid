@@ -83,4 +83,24 @@
 .testimonials .carousel2 .item{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
 }
-
+.pricing .container .item{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.pricing .know i{
+    transform: translateX(0px);
+    transition: transform 0.5s ease;
+}
+.pricing .know:hover i{
+    transform: translateX(10px);
+    transition: transform 0.5s ease;
+}
+.pricing .item2 .label{
+    font-size: 13px;
+    font-weight: 600;
+    top:33px;
+    padding:10px 20px; 
+    right:0px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    transform: rotate(270deg);
+}

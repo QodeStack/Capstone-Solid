@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -23,14 +23,15 @@
 </head>
 
 <body>
-    <header id="navbar" class="header fixed bg-white w-full top-0 z-30">
+    <div id="header" class=" m-0 p-0 w-full h-5 dark:bg-gray-900"></div>
+    <header id="navbar" class="header fixed w-full dark:bg-gray-900 top-0 z-30">
         <!-- Main navigation container -->
-        <nav class="relative flex w-full flex-wrap items-center justify-between py-2  dark:bg-neutral-700 lg:py-7"
+        <nav class="relative flex w-full flex-wrap items-center justify-between py-2  dark:bg-gray-900 lg:py-7"
             data-twe-navbar-ref>
             <div class="flex w-full flex-wrap items-center justify-between px-3">
                 <div>
                     <a class="mx-2 my-1 flex items-center lg:mb-0 lg:mt-0  lg:mr-30" href="#">
-                        <img class="me-2" src="./src/img/logo-light.svg" style="height: 30px" alt="TE Logo"
+                        <img id="imgHeader" class="me-2" src="./src/img/logo-light.svg" style="height: 30px" alt="TE Logo"
                             loading="lazy" />
                     </a>
                 </div>
@@ -56,9 +57,9 @@
                     <!-- Left links -->
                     <ul class="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row" data-twe-navbar-nav-ref>
                         <!-- Home link -->
-                        <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 lg:mx-3" data-twe-nav-item-ref>
+                        <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 lg:mx-3 " data-twe-nav-item-ref>
                             <a href="#"
-                                class="text-blue-500 transition duration-200 hover:text-blue-500 hover:ease-in-out motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                                class="text-blue-500 transition duration-200 hover:text-blue-500 hover:ease-in-out motion-reduce:transition-none dark:text-blue-500 lg:px-2"
                                 aria-current="page" href="#" data-twe-nav-link-ref>Home</a>
                         </li>
                         <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 lg:mx-3" data-twe-nav-item-ref>
@@ -76,7 +77,7 @@
                                 aria-current="page" href="#" data-twe-nav-link-ref>Docs</a>
                         </li>
                         <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2 lg:mx-3" data-twe-nav-item-ref>
-                            <nav class="relative flex w-full flex-wrap items-center justify-between dark:bg-neutral-700 "
+                            <nav class="relative flex w-full flex-wrap items-center justify-between  "
                                 data-twe-navbar-ref>
                                 <div class="flex w-full flex-wrap items-center justify-between">
                                     <div class="relative flex items-center">
@@ -138,8 +139,9 @@
                         <i class="fa fa-search me-3 inline-block rounded px-2 pb-2 pt-2.5 text-xl font-medium uppercase leading-normal text-gray-500 hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700 dark:text-secondary-600 dark:hover:text-secondary-500 dark:focus:text-secondary-500 dark:active:text-secondary-500 "
                             data-twe-ripple-init data-twe-ripple-color="light"></i>
                         <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                        onclick="changeTheme()"
                             class="me-3 inline-block rounded px-3 py-2.5 font-medium uppercase leading-normal text-neutral-50  transition duration-150 ease-in-out  focus:outline-none focus:ring-0   motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
-                            <img src="./src/img/icon-moon.svg" style="height: 27px" />
+                            <img id="TagChange" src="./src/img/icon-moon.svg" style="height: 27px" />
                         </button>
                         <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
                             class="me-3 inline-block rounded px-2 pb-2 pt-2.5 text-xl font-medium  leading-normal text-gray-500 hover:text-blue-500 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700 dark:text-secondary-600 dark:hover:text-secondary-500 dark:focus:text-secondary-500 dark:active:text-secondary-500">
@@ -154,24 +156,24 @@
             </div>
         </nav>
     </header>
-    <section class="carousel mt-15">
+    <section class="carousel pt-25 dark:bg-gray-900">
         <div class="flex justify-around">
             <div class="content ml-7 mt-5 ">
-                <h1 class="text-black font-bold mb-7">🔥 Solid - A Complete SaaS Starter Template for SaaS</h1>
-                <h2 class="text-black font-blod text-5xl w-[90%] mb-7">Robust SaaS Boilerplate and Starter forNext.js
+                <h1 class="text-black dark:text-white font-bold mb-7">🔥 Solid - A Complete SaaS Starter Template for SaaS</h1>
+                <h2 class="text-black dark:text-white font-blod text-5xl w-[90%] mb-7">Robust SaaS Boilerplate and Starter forNext.js
                 </h2>
                 <p class="text-gray-500 mb-9 w-[90%]">Packed with all the key integrations you need for swift SaaS
                     startup launch, including - Authentication, Database, Sanity Blog, Essential UI Components, Business
                     Pages and More. Built-winth - Next.js, React 18 and TypeScript.</p>
                 <a class="button py-4 px-6 rounded-3xl bg-blue-950 text-white">Get Started</a>
             </div>
-            <img src="./src/img/hero-light.svg"
+            <img id="imgCarousel" src="./src/img/hero-light.svg"
                 style="width:50%; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; margin-right: 50px;" />
         </div>
     </section>
-    <section class="logo mt-10">
+    <section class="logo py-30 dark:bg-gray-900">
         <div
-            class="container-fluid flex justify-around items-center py-15 my-30 border border-t-gray-300 border-b-gray-300 bg-gray-200">
+            class="container-fluid flex justify-around items-center py-15 border border-t-gray-300 border-b-gray-300 bg-gray-200 dark:bg-gray-900">
             <div class="content">
                 <img src="./src/img/brand-light-01.svg" />
             </div>
@@ -192,13 +194,13 @@
             </div>
         </div>
     </section>
-    <section class="Features">
+    <section class="Features dark:bg-gray-900">
         <div class="container-fluid text-center">
-            <h1 class="bg-blue-300 inline px-3 py-3 rounded-2xl ">SOLID FEATURES</h1>
-            <h2 class=" my-7 text-5xl font-bold ">Core Features of Solid</h2>
+            <h1 class="bg-blue-300 inline px-3 py-3 rounded-2xl dark:text-white ">SOLID FEATURES</h1>
+            <h2 class=" my-7 text-5xl font-bold dark:text-white">Core Features of Solid</h2>
             <p class="w-1/2 mx-auto text-gray-500 mb-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
-            <div class="grid gap-10 grid-cols-3 mx-10">
+            <div class="grid gap-10 grid-cols-3 mx-10 dark:text-white">
                 <div class="item text-left pl-8 py-15">
                     <img src="./src/img/icon-01.svg"
                         style="background-color: rgb(0, 157, 255); height: 60px; border-radius: 5px; " />
@@ -244,15 +246,15 @@
             </div>
         </div>
     </section>
-    <section class="solution mt-30">
+    <section class="solution pt-30 dark:bg-gray-900">
         <div class="container-fluid flex gap-20 justify-around items-center">
-            <img src="./src/img/about-light-01.png" style="width:40%; margin: 0 50px;" />
+            <img id="imgSolution" src="./src/img/about-light-01.png" style="width:40%; margin: 0 50px;" />
             <div class="w-1/2 ">
                 <div class="flex  gap-10">
                     <button class=" bg-emerald-400 py-1 px-5 text-white rounded-2xl">New</button>
-                    <h1 class="uppercase font-bold py-1"> SaaS Boilerplate for Next.js</h1>
+                    <h1 class="uppercase font-bold py-1 dark:text-white"> SaaS Boilerplate for Next.js</h1>
                 </div>
-                <div class="font-bold text-5xl mt-7 ">
+                <div class="font-bold text-5xl mt-7 dark:text-white ">
                     <h2 class="">A Complete Solution for</h2>
                     <div class="edit">
                         <h3 class="mt-3">SaaS Startup</h3>
@@ -261,18 +263,18 @@
                 </div>
                 <p class="text-gray-500 mt-25 w-6/7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                     ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
-                <div class="mt-7 flex gap-10">
+                <div class="mt-7 flex gap-10 dark:text-white">
                     <div
-                        class=" font-bold text-2xl border border-gray-200 h-15 w-15 rounded-full flex items-center justify-center">
+                        class="dark:text-white font-bold text-2xl border border-gray-200 h-15 w-15 rounded-full flex items-center justify-center">
                         01</div>
                     <div>
                         <h1 class="text-xl w-[85%]">Mailchimp for Newsletter Emails + SMTP for Transactional Emails</h1>
                         <h2 class="text-gray-500">Ut ultricies lacus non fermentum ultrices.</h2>
                     </div>
                 </div>
-                <div class="mt-7 flex gap-10">
+                <div class="mt-7 flex gap-10 dark:text-white">
                     <div
-                        class=" font-bold text-2xl border border-gray-200 h-15 w-15 rounded-full flex items-center justify-center">
+                        class="dark:text-white font-bold text-2xl border border-gray-200 h-15 w-15 rounded-full flex items-center justify-center">
                         02
                     </div>
                     <div>
@@ -283,18 +285,19 @@
             </div>
         </div>
     </section>
-    <section class="Packed mt-40">
+    <section class="Packed pt-40 dark:bg-gray-900">
         <div class="container-fluid flex gap-15 px-15">
             <div class="my-auto">
-                <h1 class="font-semibold uppercase ">Launch Your SaaS Fast</h1>
-                <h2 class="text-5xl font-bold mt-7">Packed with All</h2>
+                <h1 class="font-semibold uppercase dark:text-white ">Launch Your SaaS Fast</h1>
+                <h2 class="text-5xl font-bold mt-7 dark:text-white">Packed with All</h2>
                 <div class="edit">
-                    <h3 class="text-5xl font-bold mt-3 mb-7">EssentialIntegrations</h3>
+                    <h3 class="text-5xl font-bold mt-3 mb-7
+                    dark:text-white">EssentialIntegrations</h3>
                     <div class="overlay"></div>
                 </div>
                 <p class="text-gray-500 mb-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies
                     lacus non fermentum ultrices. Fusce consectetur le.</p>
-                <div class="know hover:text-blue-500 inline">
+                <div class="know hover:text-blue-500 inline dark:text-white">
                     <span>Know More</span>
                     <i class="fa fa-arrow-right ml-1"></i>
                 </div>
@@ -302,67 +305,67 @@
             <img src="./src/img/about-light-02.svg" />
         </div>
     </section>
-    <section class="benefits mb-40">
+    <section class="benefits pt-40 dark:bg-gray-900">
         <div class="container mx-auto">
             <!--Pills navigation-->
-            <ul class="mb-5 flex list-none flex-col flex-wrap ps-0 md:flex-row border border-gray-300 rounded-2xl"
+            <ul class="pb-5 flex list-none flex-col flex-wrap ps-0 md:flex-row border border-gray-300 rounded-2xl"
                 role="tablist" data-twe-nav-ref style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                 <li role="presentation" class="flex-grow basis-0 text-center">
                     <a href="#pills-home02"
-                        class="my-2 block rounded px-5 pb-2.5 pt-3 text-xs font-medium leading-tight text-black dark:bg-neutral-700 dark:text-white/50 dark:data-[twe-nav-active]:!bg-slate-900  md:me-4"
+                        class="my-2 block rounded px-5 pb-2.5 pt-3 text-xs font-medium leading-tight text-black "
                         id="pills-home-tab02" data-twe-toggle="pill" data-twe-target="#pills-home02" data-twe-nav-active
                         role="tab" aria-controls="pills-home02" aria-selected="true">
                         <div class="flex gap-5 justify-center items-center ">
                             <div
-                                class=" font-bold text-xl border border-gray-200 h-12 w-12 rounded-full flex items-center justify-center">
+                                class=" font-bold text-xl border border-gray-200 h-12 w-12 rounded-full flex items-center justify-center dark:text-white">
                                 01
                             </div>
-                            <h1 class="text-xl my-auto ">Clean User Interface</h1>
+                            <h1 class="text-xl my-auto dark:text-white">Clean User Interface</h1>
                         </div>
                     </a>
                 </li>
                 <li role="presentation" class="flex-grow basis-0 text-center">
                     <a href="#pills-profile02"
-                        class="my-2 block rounded px-5 pb-2.5 pt-3 text-xs font-medium leading-tight text-black dark:bg-neutral-700 dark:text-white/50 dark:data-[twe-nav-active]:!bg-slate-900  md:me-4"
+                        class="my-2 block rounded px-5 pb-2.5 pt-3 text-xs font-medium leading-tight text-black "
                         id="pills-profile-tab02" data-twe-toggle="pill" data-twe-target="#pills-profile02" role="tab"
                         aria-controls="pills-profile02" aria-selected="true">
                         <div class="flex gap-5 justify-center items-center">
                             <div
-                                class=" font-bold text-xl border border-gray-200 h-12 w-12 rounded-full flex items-center justify-center">
+                                class=" font-bold text-xl border border-gray-200 h-12 w-12 rounded-full flex items-center justify-center dark:text-white">
                                 02
                             </div>
-                            <h1 class="text-xl my-auto ">Essential Business Pages</h1>
+                            <h1 class="text-xl my-auto dark:text-white ">Essential Business Pages</h1>
                         </div>
                     </a>
                 </li>
                 <li role="presentation" class="flex-grow basis-0 text-center">
                     <a href="#pills-contact02"
-                        class="my-2 block rounded px-5 pb-2.5 pt-3 text-xs font-medium leading-tight text-black  dark:bg-neutral-700 dark:text-white/50 dark:data-[twe-nav-active]:!bg-slate-900  md:me-4"
+                        class="my-2 block rounded px-5 pb-2.5 pt-3 text-xs font-medium leading-tight text-black "
                         id="pills-contact-tab02" data-twe-toggle="pill" data-twe-target="#pills-contact02" role="tab"
                         aria-controls="pills-contact02" aria-selected="true">
                         <div class="flex gap-5 justify-center items-center">
                             <div
-                                class=" font-bold text-xl border border-gray-200 h-12 w-12 rounded-full flex items-center justify-center">
+                                class=" font-bold text-xl border border-gray-200 h-12 w-12 rounded-full flex items-center justify-center dark:text-white">
                                 03
                             </div>
-                            <h1 class="text-xl my-auto ">Fully Functional Integrations</h1>
+                            <h1 class="text-xl my-auto dark:text-white">Fully Functional Integrations</h1>
                         </div>
                     </a>
                 </li>
             </ul>
             <!--Pills content-->
-            <div class="mb-6">
+            <div class="pb-6">
                 <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
                     id="pills-home02" role="tabpanel" aria-labelledby="pills-home-tab02" data-twe-tab-active>
                     <div class="flex gap-10 mt-20">
                         <div class="mt-10">
-                            <h1 class="text-3xl font-bold w-[70%]">Solid UI with Solid Features.</h1>
+                            <h1 class="text-3xl font-bold w-[70%] dark:text-white">Solid UI with Solid Features.</h1>
                             <h2 class="text-gray-500 w-[80%] my-7">Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</h2>
                             <p class="text-gray-500 w-[80%]">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque
                                 nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
                         </div>
-                        <img src="./src/img/features-light-01.png" style="width: 50%;" />
+                        <img id="imgBenefit1" src="./src/img/features-light-01.png" style="width: 50%;" />
                     </div>
                 </div>
 
@@ -370,36 +373,36 @@
                     id="pills-profile02" role="tabpanel" aria-labelledby="pills-profile-tab02">
                     <div class="flex gap-10 mt-20">
                         <div class="mt-10">
-                            <h1 class="text-3xl font-bold w-[70%]">Pages and UI Components You Need for a SaaS.</h1>
+                            <h1 class="text-3xl font-bold w-[70%] dark:text-white">Pages and UI Components You Need for a SaaS.</h1>
                             <h2 class="text-gray-500 w-[80%] my-7">Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</h2>
                             <p class="text-gray-500 w-[80%]">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque
                                 nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
                         </div>
-                        <img src="./src/img/features-light-01.png" style="width: 50%;" />
+                        <img id="imgBenefit2" src="./src/img/features-light-01.png" style="width: 50%;" />
                     </div>
                 </div>
                 <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
                     id="pills-contact02" role="tabpanel" aria-labelledby="pills-contact-tab02">
                     <div class="flex gap-10 mt-20">
                         <div class="mt-10">
-                            <h1 class="text-3xl font-bold w-[70%]">Functional Blog, DB, Auth and Many More</h1>
+                            <h1 class="text-3xl font-bold w-[70%] dark:text-white">Functional Blog, DB, Auth and Many More</h1>
                             <h2 class="text-gray-500 w-[80%] my-7">Lorem ipsum dolor sit amet, consectetur adipiscing
                                 elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</h2>
                             <p class="text-gray-500 w-[80%]">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque
                                 nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
                         </div>
-                        <img src="./src/img/features-light-01.png" style="width: 50%;" />
+                        <img id="imgBenefit3" src="./src/img/features-light-01.png" style="width: 50%;" />
                     </div>
                 </div>
             </div>
     </section>
-    <section class="statistic mb-30" style="height: 600px;">
-        <div class="container rounded-2xl relative bg-gradient-to-b from-blue-100 to-blue-50 h-full w-full mx-auto">
-            <img src="./src/img/shape-dotted-light-02.svg" style="position: absolute; top:0;" />
-            <img src="./src/img/shape-04.png" style="height: 350px; position: absolute; top:-90px; " />
-            <img src="./src/img/shape-05.png" style="height: 200px; position: absolute; right:0; bottom: 0;" />
-            <div class="flex flex-col items-center h-full my-auto relative">
+    <section class="statistic pb-30 dark:bg-gray-900" style="height: 600px;">
+        <div class="dark:bg-gray-900 container rounded-2xl relative z-8 bg-gradient-to-b from-blue-100 to-blue-50 h-full w-full mx-auto">
+            <img id="imgStatistic" src="./src/img/shape-dotted-light-02.svg" style="z-index:18; position: absolute; top:0;" />
+            <img src="./src/img/shape-04.png" style="z-index:20; height: 350px; position: absolute; top:-90px; " />
+            <img src="./src/img/shape-05.png" style="z-index:20; height: 200px; position: absolute; right:0; bottom: 0;" />
+            <div class="flex flex-col items-center h-full my-auto relative dark:bg-gray-900">
                 <h1 class="text-5xl font-bold mt-20 w-[40%] text-center">Trusted by Global Companies.</h1>
                 <p class="text-gray-500 w-1/2 text-center mt-7 mb-15">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
@@ -420,15 +423,15 @@
             </div>
         </div>
     </section>
-    <section class="integrations relative mx-15 mb-30  ">
-        <img src="./src/img/shape-dotted-light.svg" style="position: absolute; height:400px; width:100%;top:100px;" />
+    <section class="integrations relative pb-30 dark:bg-gray-900">
+        <img id="imgIntegrations" src="./src/img/shape-dotted-light.svg" style="position: absolute; height:400px; width:100%;top:100px;" />
         <div class="text-center mb-20">
-            <button class="rounded-3xl px-3 py-2 bg-blue-100 ">INTEGRATIONS</button>
-            <h2 class="font-bold text-5xl w-1/2 mx-auto my-7">Packed with all the key integrations you need</h2>
+            <button class="font-bold text-[15px] rounded-3xl px-3 py-2 bg-blue-100 dark:bg-gray-900 dark:text-white dark:border-gray-600 dark:border">INTEGRATIONS</button>
+            <h2 class="font-bold text-5xl w-1/2 mx-auto my-7 dark:text-white">Packed with all the key integrations you need</h2>
             <p class="text-gray-500 w-1/2 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
                 tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
-        <div class="grid grid-cols-6 gap-10 relative">
+        <div class="grid grid-cols-6 gap-10 relative px-15">
             <img src="./src/img/brand-07.svg"
                 style="padding:15px 15px; background-color:white; border-radius: 15px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" />
             <div></div>
@@ -449,24 +452,27 @@
                 style="padding:15px 15px; background-color:white; border-radius: 15px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" />
         </div>
     </section>
-    <section class="register bg-gradient-to-b from-blue-200 to-blue-50 mx-15 mb-30 rounded-3xl">
-        <div class="flex  items-center">
-            <div class="ml-20">
-                <h1 class="font-extrabold text-3xl mb-7 w-[80%]">Join With Us Today & Increase Your Productivity</h1>
+    <section class="dark:bg-gray-900 register pb-10">
+        <div class=" bg-gradient-to-b from-blue-200 to-blue-50 mx-15 rounded-4xl ">
+            <div class=" flex items-center dark:bg-gray-800 pb-20 rounded-3xl">
+            <div class="ml-20 ">
+                <h1 class="font-extrabold text-3xl mb-7 w-[80%] dark:text-white">Join With Us Today & Increase Your Productivity</h1>
                 <p class="text-gray-500 w-[80%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
                     tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
             </div>
             <img src="./src/img/shape-06.png" style="height:300px;margin-right: 100px;" />
-            <div class="bg-gray-900 w-[25%] inline mr-15 text-center py-3 rounded-3xl text-white hover:bg-gray-700">
+            <div class="bg-gray-900 dark:bg-yellow-200 w-[25%] inline mr-15 text-center py-3 rounded-3xl text-white hover:bg-gray-700 dark:text-black">
                 <span class="">Sign up free</span>
                 <i class="fa fa-arrow-right ml-2"></i>
             </div>
+            </div>
+
         </div>
     </section>
-    <section class="questions mb-30">
+    <section class="questions pb-30 dark:bg-gray-900">
         <div class="flex items-center">
             <div class="w-1/2 ml-15">
-                <div class="mb-30">
+                <div class="mb-30 dark:text-white">
                     <h2 class="font-medium">OUR FAQS</h2>
                     <h1 class="font-bold text-5xl mt-7 mb-3">Frequently Asked</h1>
                     <div class="edit">
@@ -474,21 +480,21 @@
                         <div class="overlay"></div>
                     </div>
                 </div>
-                <div class="know hover:text-blue-500 inline ">
+                <div class="know hover:text-blue-500 inline dark:text-white">
                     <span>Know More</span>
                     <i class="fa fa-arrow-right ml-1"></i>
                 </div>
             </div>
-            <div id="accordionFlushExample" class="w-1/2 mr-15 py-7">
+            <div id="accordionFlushExample" class="w-1/2 mr-15 py-7 rouded-3xl">
                 <div
-                    class="rounded-none border border-e-0 border-s-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-body-dark">
-                    <h2 class="mb-0" id="flush-headingOne">
+                    class=" border border-e-0 border-s-0 border-t-0 border-neutral-200 bg-white dark:bg-gray-900 dark:border-neutral-600 ">
+                    <h2 class="mb-0 dark:bg-gray-900" id="flush-headingOne">
                         <button
-                            class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                            class=" dark:bg-gray-900 group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none   "
                             type="button" data-twe-collapse-init data-twe-target="#flush-collapseOne"
                             aria-expanded="false" aria-controls="flush-collapseOne">
-                            <div class="font-bold text-xl">Lorem ipsum dolor sit amet, consectetur</div>
-                            <span class="text-4xl font-medium ms-auto">
+                            <div class="font-bold text-xl dark:text-white">Lorem ipsum dolor sit amet, consectetur</div>
+                            <span class="text-4xl font-medium ms-auto dark:text-white">
                                 <span class="group-data-[twe-collapse-collapsed]:inline hidden ">+</span>
                                 <span class="group-data-[twe-collapse-collapsed]:hidden inline ">−</span>
                             </span>
@@ -504,15 +510,15 @@
                 </div>
 
                 <div
-                    class="rounded-none border border-e-0 border-s-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-body-dark">
+                    class="rounded-none border border-e-0 border-s-0 border-t-0 bg-white dark:border-neutral-600 dark:bg-body-dark">
                     <h2 class="mb-0" id="flush-headingTwo">
                         <button
-                            class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                            class="dark:bg-gray-900 group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:text-white  "
                             type="button" data-twe-collapse-init data-twe-collapse-collapsed
                             data-twe-target="#flush-collapseTwo" aria-expanded="false"
                             aria-controls="flush-collapseTwo">
                             <div class="font-bold text-xl">Lorem ipsum dolor sit amet, consectetur</div>
-                            <span class="text-4xl font-medium ms-auto">
+                            <span class="text-4xl font-medium ms-auto dark:text-white">
                                 <span class="group-data-[twe-collapse-collapsed]:inline hidden ">+</span>
                                 <span class="group-data-[twe-collapse-collapsed]:hidden inline ">−</span>
                             </span>
@@ -520,7 +526,7 @@
                     </h2>
                     <div id="flush-collapseTwo" class="!visible hidden border-0" data-twe-collapse-item
                         aria-labelledby="flush-headingTwo" data-twe-parent="#accordionFlushExample">
-                        <div class="px-5 py-4 text-gray-500">
+                        <div class="px-5 py-4 text-gray-500 dark:bg-gray-900">
                             We provide digital experience services to startups and small businesses. We help our clients
                             succeed by creating brand identities, digital experiences.
                         </div>
@@ -531,7 +537,7 @@
                     class="rounded-none border border-b-0 border-e-0 border-s-0 border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-body-dark">
                     <h2 class="mb-0" id="flush-headingThree">
                         <button
-                            class="group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                            class="dark:bg-gray-900 group relative flex w-full items-center rounded-none border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none  dark:text-white "
                             type="button" data-twe-collapse-init data-twe-collapse-collapsed
                             data-twe-target="#flush-collapseThree" aria-expanded="false"
                             aria-controls="flush-collapseThree">
@@ -544,7 +550,7 @@
                     </h2>
                     <div id="flush-collapseThree" class="!visible hidden" data-twe-collapse-item
                         aria-labelledby="flush-headingThree" data-twe-parent="#accordionFlushExample">
-                        <div class="px-5 py-4 text-gray-500">
+                        <div class="px-5 py-4 text-gray-500 dark:bg-gray-900">
                             We provide digital experience services to startups and small businesses. We help our clients
                             succeed by creating brand identities, digital experiences.
                         </div>
@@ -553,19 +559,19 @@
             </div>
         </div>
     </section>
-    <section class="testimonials mb-30">
+    <section class="testimonials pb-30 dark:bg-gray-900">
         <div>
             <div class="mx-auto text-center mb-10">
-                <button class="font-medium rounded-3xl px-3 py-2 bg-blue-100">TESTIMONIALS</button>
-                <h1 class="my-7 text-5xl font-bold ">Client’s Testimonials</h1>
+                <button class="font-medium rounded-3xl px-3 py-2 bg-blue-100 dark:text-white dark:bg-gray-900 dark:border-gray-400 border text-[15px]">TESTIMONIALS</button>
+                <h1 class="my-7 text-5xl font-bold dark:text-white">Client’s Testimonials</h1>
                 <p class="text-gray-500 w-1/2 mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
             </div>
             <div class="carousel2 owl-carousel owl-theme">
-                <div class="item w-[80%] mx-auto p-7">
+                <div class="item w-[80%] mx-auto p-7 dark:bg-gray-800 rounded-2xl">
                     <div class="flex justify-between ">
                         <div class="flex flex-col">
-                            <h2 class="text-xl">Devid Smith</h2>
+                            <h2 class="text-xl dark:text-white">Devid Smith</h2>
                             <h3 class="text-gray-400 text-xl">Founter @democompany</h3>
                         </div>
 
@@ -577,10 +583,10 @@
                         cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.
                     </p>
                 </div>
-                <div class="item w-[80%] mx-auto p-7">
+                <div class="item w-[80%] mx-auto p-7 dark:bg-gray-800 rounded-2xl">
                     <div class="flex justify-between ">
                         <div class="flex flex-col">
-                            <h2 class="text-xl">Jhon Abraham</h2>
+                            <h2 class="text-xl dark:text-white">Jhon Abraham</h2>
                             <h3 class="text-gray-400 text-xl">Founter @democompany</h3>
                         </div>
 
@@ -592,10 +598,10 @@
                         cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.
                     </p>
                 </div>
-                <div class="item w-[80%] mx-auto p-7">
+                <div class="item w-[80%] mx-auto p-7 dark:bg-gray-800 rounded-2xl">
                     <div class="flex justify-between ">
                         <div class="flex flex-col">
-                            <h2 class="text-xl">Devid Smith</h2>
+                            <h2 class="text-xl dark:text-white">Devid Smith</h2>
                             <h3 class="text-gray-400 text-xl">Founter @democompany</h3>
                         </div>
 
@@ -607,10 +613,10 @@
                         cursus tincidunt, lorem sem elementum nisi, convallis fringilla ante nibh non urna.
                     </p>
                 </div>
-                <div class="item w-[80%] mx-auto p-7">
+                <div class="item w-[80%] mx-auto p-7 dark:bg-gray-800 rounded-2xl">
                     <div class="flex justify-between ">
                         <div class="flex flex-col">
-                            <h2 class="text-xl">Jhon Abraham</h2>
+                            <h2 class="text-xl dark:text-white">Jhon Abraham</h2>
                             <h3 class="text-gray-400 text-xl">Founter @democompany</h3>
                         </div>
 
@@ -625,12 +631,203 @@
             </div>
         </div>
     </section>
-    <section class="prince"></section>
-    <section class="info"></section>
-    <section class="news_blogs"></section>
-    <section class="contact"></section>
-    <footer class="footer"></footer>
-
+    <section class="pricing pb-30 dark:bg-gray-900">
+        <div>
+            <div class="mx-auto text-center mb-10">
+                <button class="font-medium rounded-3xl px-3 py-2 bg-blue-100 mx-auto dark:text-white dark:bg-gray-900 border-gray-500 border text-[15px]">PRICING PLANS</button>
+                <h1 class="text-5xl font-bold my-7 mx-auto text-center dark:text-white">Simple Pricing</h1>
+                <p class="text-gray-500 w-[60%] mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+            <div class="container flex justify-around items-center mx-auto dark:text-white ">
+                <div class="item p-8 w-[30%]">
+                    <h1 class="text-5xl font-bold">$100<b class="text-gray-500 text-xl font-medium">/month</b></h1>
+                    <h2 class="text-2xl mt-7 mb-3">Small Pack</h2>
+                    <p class="text-gray-500 w-[60%]">Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+                    <div class="border border-gray-500 w-[90%] mx-auto h-[1px] my-6"></div>
+                    <div class="dark:text-gray-500">300 GB Storage</div>
+                    <div class="my-6 dark:text-gray-500">Unlimited Photos and Videos</div>
+                    <div class="text-gray-500">Exclusive Support</div>
+                    <div class="text-gray-500 my-6">Custom Branding Strategy</div>
+                    <div class="know text-blue-500 inline dark:text-white">
+                        <span>Get the Plan</span>
+                        <i class="fa fa-arrow-right ml-1"></i>
+                    </div>
+                </div>
+                <div class="item p-8 w-[30%] relative item2">
+                    <h1 class="text-5xl font-bold">$200<b class="text-gray-500 text-xl font-medium">/month</b></h1>
+                    <h2 class="text-2xl mt-7 mb-3">Small Pack</h2>
+                    <p class="text-gray-500 w-[60%]">Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+                    <div class="border border-gray-500 w-[90%] mx-auto h-0.5 my-6"></div>
+                    <div class="dark:text-gray-500">300 GB Storage</div>
+                    <div class="my-6 dark:text-gray-500">Unlimited Photos and Videos</div>
+                    <div class="text-gray-500">Exclusive Support</div>
+                    <div class="text-gray-500 my-6">Custom Branding Strategy</div>
+                    <div class="know text-blue-500 inline dark:text-white">
+                        <span>Get the Plan</span>
+                        <i class="fa fa-arrow-right ml-1"></i>
+                    </div>
+                    <div class="text-white bg-blue-500 inline absolute label ">POPULAR</div>
+                </div>
+                <div class="p-8 w-[30%] item">
+                    <h1 class="text-5xl font-bold">$300<b class="text-gray-500 text-xl font-medium">/month</b></h1>
+                    <h2 class="text-2xl mt-7 mb-3">Small Pack</h2>
+                    <p class="text-gray-500 w-[60%]">Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+                    <div class="border border-gray-500 w-[90%] mx-auto h-0.5 my-6"></div>
+                    <div class="dark:text-gray-500">300 GB Storage</div>
+                    <div class="my-6 dark:text-gray-500">Unlimited Photos and Videos</div>
+                    <div class="text-gray-500">Exclusive Support</div>
+                    <div class="text-gray-500 my-6">Custom Branding Strategy</div>
+                    <div class="know text-blue-500 inline dark:text-white">
+                        <span>Get the Plan</span>
+                        <i class="fa fa-arrow-right ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info pb-30 dark:bg-gray-900">
+        <div class=" bg-gradient-to-b from-blue-100 to-blue-50 rounded-2xl mx-10 ">
+        <div class="rounded flex items-center gap-20 pt-15 pb-20  dark:bg-gradient-to-b from-gray-800 to-gray-600 ">
+            <div class="bg-white ml-15 p-15 rounded dark:bg-gray-900">
+                <h2 class="text-4xl font-bold mb-7 dark:text-white">Send a messeage</h2>
+                <div class="grid grid-cols-2 gap-10">
+                    <div>
+                        <input type="text" class="outline-none dark:placeholder-white dark:caret-white" placeholder="Full name"/>
+                        <div class="border border-gray-200"></div>  
+                    </div> 
+                    <div>
+                        <input  type="text" class="outline-none dark:placeholder-white dark:caret-white" placeholder="Email address"/>
+                        <div class="border border-gray-200"></div>  
+                    </div>  
+                    <div>
+                        <input  type="text" class="outline-none dark:placeholder-white dark:caret-white" placeholder="Subject"/>
+                        <div class="border border-gray-200"></div>  
+                    </div>  
+                    <div>
+                        <input  type="text" class="outline-none dark:placeholder-white dark:caret-white" placeholder="Phone number"/>
+                        <div class="border border-gray-200"></div>  
+                    </div>  
+                    <div class="col-span-2 ">
+                        <input type="text" class="outline-none dark:placeholder-white dark:caret-white" placeholder="Message"/>
+                        <div class="border border-gray-200"></div>  
+                    </div>  
+                </div>
+                <div class="flex items-center gap-5 mt-10">
+                    <div id="btn-tick" class=" bg-gray-300 h-5 w-5 rounded ">
+                        <span id="tick-icon" class="text-white text-sm hidden ml-1">✓</span>
+                    </div>
+                    <p class="w-[60%] text-gray-500">By clicking Checkbox, you agree to use our “Form” terms And consent cookie usage in browser.</p>
+                    <div class="px-5 py-3 bg-gray-900 text-white rounded-3xl hover:bg-gray-700 transition duration-30 dark:bg-gray-400">
+                        <span>Send Message</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-4xl font-bold mb-15 dark:text-white">Find us</h1>
+                <h2 class="mb-4 dark:text-white">Our Loaction</h2>
+                <span class="text-gray-500  ">290 Maryam Springs 260, Courbevoie, Paris, France</span>
+                <h2 class="mb-4 mt-7 dark:text-white">Email Address</h2>
+                <span class="text-gray-500 ">yourmail@domainname.com</span>
+                <h2 class="mb-4 mt-7 dark:text-white">Phone Number</h2>
+                <span class="text-gray-500 ">+009 42334 6343 843</span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="news_blogs pb-30 dark:bg-gray-900 ">
+        <div>
+            <div class="text-center">
+                <button class="font-medium rounded-3xl px-3 py-2 bg-blue-100 dark:text-white dark:bg-gray-900 border-gray-500 border text-[15px]">NEWS & BLOGS</button>
+                <h1 class="text-5xl font-bold my-7 dark:text-white">Latest News & Blogs</h1>
+                <p class="text-gray-500 w-[50%] mx-auto mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+            <div class="flex justify-between items-center gap-15 ml-10 mr-10">
+                <div class="bg-white dark:bg-gray-900 py-4 px-5 rounded-2xl"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="w-full h-full overflow-hidden">
+                    <img src="./src/img/9e6b67ab379a182243ac521db056e96918ff1b5d-1000x667.png" class="rounded  object-cover w-[400px] h-[200px] transition-transform duration-300 ease-in-out hover:scale-110"/>
+                    </div>
+                    <h1 class="text-2xl my-7 w-[90%] pl-2 hover:text-blue-500 dark:text-white">Exploring MERN Stack: Powering Modern We...</h1>
+                    <p class="text-gray-500 w-[90%] pl-2">In the world of web development, staying ahead of the curve is crucial. One technology stack that ha</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 py-4 px-5 rounded-2xl"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="w-full h-full overflow-hidden">
+                    <img src="./src/img/b34fca863dc4efa821da4e71328ec9718ab14062-970x440.png" class="rounded object-cover w-[400px] h-[200px] transition-transform duration-300 ease-in-out hover:scale-110"/>
+                    </div>
+                    <h1 class="text-2xl my-7 w-[80%] pl-2 hover:text-blue-500 dark:text-white">Best UI components for modern website...</h1>
+                    <p class="text-gray-500 w-[90%] pl-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat...</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 py-4 px-5 rounded-2xl"  style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="w-full h-full overflow-hidden">
+                    <img src="./src/img/f492eebba9742b0c8c71dd541bd123cdd4fe2130-970x440.png" class="rounded  object-cover w-[400px] h-[200px] transition-transform duration-300 ease-in-out hover:scale-110"/>
+                    </div>
+                    <h1 class="text-2xl my-7 w-[80%] pl-2 hover:text-blue-500 dark:text-white">The Power of UI/UX: Elevating Digital Ex...</h1>
+                    <p class="text-gray-500 w-[90%] pl-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="border border-gray-500 w-full h-[1px] "></div>
+    <section class="contact dark:bg-gray-900">
+        <div class="flex px-15 py-20 gap-30">
+            <div>
+                <img id="imgContact" src="./src/img/logo-light.svg"/>
+                <p class="text-gray-600 my-7 w-[80%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <span class="text-gray-500" style="letter-spacing: 4px;">CONTACT</span>
+                <h2 class="mb-7 mt-3 text-2xl dark:text-white">hello@solid.com</h2>
+            </div>
+            <div>
+                <h1 class="text-2xl mb-3 text-black dark:text-white">Quick&nbspLinks</h1>
+                <nav class="flex flex-col gap-3 text-gray-500">
+                    <a >Home</a>
+                    <a>Product</a>
+                    <a>Careers</a>
+                    <a>Pricing</a>
+                </nav>
+            </div>
+            <div>
+                <h1 class="text-2xl mb-3 text-black dark:text-white">Support</h1>
+                <nav class="flex flex-col gap-3 text-gray-500">
+                    <a>Company</a>
+                    <a>Press media</a>
+                    <a>Our Blog</a>
+                    <a>Contact Us</a>
+                </nav>
+            </div>
+            <div>
+                <h1 class="text-2xl mb-3 text-black dark:text-white">Newsletter</h1>
+                <span class="block my-7 text-gray-500 w-[80%]">Subscribe to receive future updates</span>
+                <form>
+                    <div class="flex items-center bg-white border border-gray-200 rounded-full px-5 py-3 shadow-sm dark:bg-gray-700 ">
+                        <input type="email" placeholder="Email address"   class="flex-grow bg-transparent outline-none text-gray-500 placeholder-gray-400 tracking-wide "/>
+                        <button type="submit">
+                            <svg class="fill-[#757693] dark:fill-white" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_48_1487)"><path d="M3.1175 1.17318L18.5025 9.63484C18.5678 9.67081 18.6223 9.72365 18.6602 9.78786C18.6982 9.85206 18.7182 9.92527 18.7182 9.99984C18.7182 10.0744 18.6982 10.1476 18.6602 10.2118C18.6223 10.276 18.5678 10.3289 18.5025 10.3648L3.1175 18.8265C3.05406 18.8614 2.98262 18.8792 2.91023 18.8781C2.83783 18.8769 2.76698 18.857 2.70465 18.8201C2.64232 18.7833 2.59066 18.7308 2.55478 18.6679C2.51889 18.6051 2.50001 18.5339 2.5 18.4615V1.53818C2.50001 1.46577 2.51889 1.39462 2.55478 1.33174C2.59066 1.26885 2.64232 1.2164 2.70465 1.17956C2.76698 1.14272 2.83783 1.12275 2.91023 1.12163C2.98262 1.12051 3.05406 1.13828 3.1175 1.17318ZM4.16667 10.8332V16.3473L15.7083 9.99984L4.16667 3.65234V9.16651H8.33333V10.8332H4.16667Z" fill=""></path></g><defs><clipPath id="clip0_48_1487"><rect width="20" height="20" fill="white"></rect></clipPath></defs></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+     <div class="border border-gray-500 w-full h-[1px]"></div>
+    <footer class="footer dark:bg-gray-900">
+        <div class="flex gap-80 mx-10 py-7">
+            <div class="flex gap-9 text-gray-500">
+                <span class=" hover:text-blue-500">English</span>
+                <span class=" hover:text-blue-500">Privacy Policy</span>
+                <span class=" hover:text-blue-500">Support</span>
+            </div>
+            <div class="text-gray-500">© 2025 Solid. All rights reserved</div>
+            <div class="flex gap-7 text-gray-500 text-2xl">
+                <i class="fab fa-facebook-f hover:text-blue-500"></i>
+                <i class="fab fa-twitter  hover:text-blue-500"></i>
+                <i class="fab fa-linkedin-in hover:text-blue-500"></i>
+            </div>
+        </div>
+    </footer>
+    <a href="#header" class="px-3 py-2 bg-blue-700 fixed bottom-4 right-3">
+        <i class="fa fa-arrow-up text-white"></i>
+    </a>
     <!-- Main navigation container -->
 
     <script src="/node_modules/tw-elements/js/tw-elements.umd.min.js"></script>
@@ -672,6 +869,7 @@
             }
         });
     </script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
